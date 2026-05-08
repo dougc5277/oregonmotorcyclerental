@@ -1,0 +1,115 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const bikes = [
+  {
+    name: '2023 KTM 300 XC',
+    image: '/images/2025/02/Arizona-Dirt-Bike-Rentals-KTM-300-XC-2023.jpg',
+    upgrades: ['Rekluse "no-stall" auto-clutch', 'Custom-tuned suspension'],
+    description: 'Maximum power at the least possible weight and smooth, linear power delivery – the KTM 300 XC is built for the Open category.',
+  },
+  {
+    name: '2023 Husqvarna TE 300',
+    image: '/images/2025/02/Arizona-Dirt-Bike-Rentals-Husqvarna-300-TE-2023.jpg',
+    upgrades: ['Rekluse "no-stall" auto-clutch', 'Custom-tuned suspension'],
+    description: 'With electronic fuel injection, smooth power delivery and impressive torque and power, the TE 300i retains the traits it\'s become renowned for.',
+  },
+];
+---
+<Layout
+  title="Motorcycle Dirt Bike Rental, Husqvarna and KTM | Oregon Motorcycle Rental"
+  description="Motorcycle rental of Husqvarna and KTM dirt bikes for off-road enduro and single track riding in Oregon and Washington. View our newest motorcycle rentals."
+>
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="section-label">Motorcycles to Rent</p>
+      <h1 class="display page-title">Dirt Bike Rental</h1>
+      <p class="page-sub">Check out our range of Husqvarna and KTM dirt bikes below. We have 150, 250, and 300 2-strokes, and 350 and 450 4-stroke motorcycles to choose from.</p>
+    </div>
+  </section>
+
+  <section class="pricing">
+    <div class="wrap">
+      <p class="section-label">All Inclusive Bike Rental &amp; Ride Packages</p>
+      <div class="price-cards">
+        <div class="price-card featured">
+          <div class="price">$250</div>
+          <div class="price-unit">per rider / per day</div>
+          <ul class="price-includes">
+            <li>All riding gear</li>
+            <li>Experienced trail guide</li>
+            <li>Access to the best trails</li>
+          </ul>
+          <p class="price-note">Bring your own: hydration pack, gas, and lunch.</p>
+        </div>
+        <div class="price-card">
+          <div class="price">$175</div>
+          <div class="price-unit">per rider / per day</div>
+          <p class="price-note">For riders joining a rental group with their own bike and gear.</p>
+        </div>
+      </div>
+      <p class="training-add">
+        Want training? Add <strong>$50/rider/day</strong> for expert on-trail feedback.
+        <a href="/off-road-motorcycle-training/">Learn about training →</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="bikes">
+    <div class="wrap">
+      <p class="section-label">Our Fleet</p>
+      {bikes.map(bike => (
+        <div class="bike-card">
+          <img src={bike.image} alt={bike.name} class="bike-image" loading="lazy" />
+          <div class="bike-info">
+            <h2 class="display bike-name">{bike.name}</h2>
+            <ul class="bike-upgrades">
+              {bike.upgrades.map(u => <li>{u}</li>)}
+            </ul>
+            <p>{bike.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="reservations">
+    <div class="wrap">
+      <p class="section-label">Reservations</p>
+      <h2 class="display section-title">Ready to ride?</h2>
+      <p>Call Doug at <a href="tel:5092810156" class="phone">509-281-0156</a> to discuss bikes, skill level, terrain, and dates.</p>
+      <a href="/contact/" class="btn btn-big" style="margin-top:24px">Contact Us</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-hero { background: var(--ink); color: var(--cream); padding: 72px 0 80px; }
+  .page-title { font-size: clamp(48px, 8vw, 96px); color: var(--cream); margin-bottom: 20px; }
+  .page-sub { font-size: 20px; max-width: 600px; opacity: 0.85; }
+
+  .pricing { padding: 72px 0; }
+  .price-cards { display: flex; gap: 32px; flex-wrap: wrap; margin: 32px 0; }
+  .price-card { flex: 1; min-width: 260px; border: 2px solid var(--line); padding: 32px; }
+  .price-card.featured { border-color: var(--rust); }
+  .price { font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: 64px; color: var(--rust); line-height: 1; }
+  .price-unit { font-size: 14px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; margin-bottom: 20px; }
+  .price-includes { list-style: none; margin-bottom: 16px; }
+  .price-includes li::before { content: '✓ '; color: var(--rust); font-weight: 700; }
+  .price-note { font-size: 15px; opacity: 0.7; }
+  .training-add { margin-top: 24px; padding: 20px; background: var(--cream-deep); }
+  .training-add a { color: var(--rust); font-weight: 700; text-decoration: none; }
+
+  .bikes { padding: 72px 0; background: var(--cream-deep); }
+  .bike-card { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-bottom: 64px; }
+  .bike-image { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
+  .bike-name { font-size: clamp(32px, 4vw, 56px); color: var(--leather); margin-bottom: 16px; }
+  .bike-upgrades { list-style: none; margin-bottom: 16px; font-size: 15px; }
+  .bike-upgrades li::before { content: '— '; color: var(--rust); }
+  @media (max-width: 768px) {
+    .bike-card { grid-template-columns: 1fr; }
+  }
+
+  .reservations { padding: 72px 0; }
+  .phone { color: var(--rust); font-weight: 700; text-decoration: none; }
+</style>
