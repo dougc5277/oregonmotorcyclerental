@@ -1,0 +1,78 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const locations = [
+  {
+    name: 'Hood River, Oregon',
+    slug: null,
+    description: 'Rising to the north of the Columbia River is Mt. Adams and to the south Mt. Hood. Under the cover of lush pine forests some of the best motorcycle singletrack trails in the world wind their way up through the mountains.',
+  },
+  {
+    name: 'Coastal Oregon',
+    slug: '/coastal-oregon/',
+    description: 'Dramatic coastal terrain with a mix of forest singletrack and open riding. Available seasonally.',
+  },
+  {
+    name: 'Washington State',
+    slug: '/washington-state/',
+    description: 'Cross the Columbia River for incredible riding in southern Washington. Some of the most scenic trails in the Pacific Northwest.',
+  },
+  {
+    name: 'Arizona',
+    slug: '/arizona/',
+    description: 'Year-round desert riding near Phoenix. Our Arizona location is open winter and spring.',
+  },
+];
+---
+<Layout
+  title="Motorcycle Rental - Off Road Adventure | Oregon Motorcycle Rental"
+  description="Check out our off-road motorcycle enduro tour locations. Bring your posse or set up private one-on-one time with one of our expert guides."
+>
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="section-label">Tour Locations</p>
+      <h1 class="display page-title">Riding Locations</h1>
+      <p class="page-sub">Whether you're zigzagging through the trees or flying across a mountain meadow your heart will pound.</p>
+    </div>
+  </section>
+
+  <section class="locations">
+    <div class="wrap">
+      <p class="intro">We offer exciting rides year-round from our Hood River, Oregon and Arizona locations.</p>
+      <div class="locations-grid">
+        {locations.map(loc => (
+          <div class="location-card">
+            <h2 class="display location-name">{loc.name}</h2>
+            <p>{loc.description}</p>
+            {loc.slug && <a href={loc.slug} class="btn btn-outline location-link">Explore {loc.name}</a>}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <p class="section-label">Book Your Ride</p>
+      <h2 class="display section-title">Bring your posse or ride solo</h2>
+      <p>Set up private one-on-one time or come with a group of 2–4. Call Doug at <a href="tel:5092810156" class="phone-link">509-281-0156</a> to plan your trip.</p>
+      <a href="/contact/" class="btn btn-big" style="margin-top:24px">Contact Us</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-hero { background: var(--ink); color: var(--cream); padding: 72px 0 80px; }
+  .page-title { font-size: clamp(48px, 8vw, 96px); color: var(--cream); margin-bottom: 20px; }
+  .page-sub { font-size: 22px; max-width: 620px; opacity: 0.85; }
+
+  .locations { padding: 80px 0; }
+  .intro { font-size: 20px; margin-bottom: 48px; }
+  .locations-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; }
+  .location-card { border-top: 3px solid var(--rust); padding-top: 24px; display: flex; flex-direction: column; gap: 12px; }
+  .location-name { font-size: clamp(28px, 3vw, 44px); color: var(--leather); }
+  .location-link { align-self: flex-start; margin-top: 4px; }
+
+  .cta-band { background: var(--cream-deep); padding: 80px 0; }
+  .phone-link { color: var(--rust); font-weight: 700; text-decoration: none; }
+</style>
