@@ -1,0 +1,76 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout
+  title="Adventure Tour - Off Road Adventure | Oregon Motorcycle Rental"
+  description="Discover the trails of the Pacific Northwest with our experienced guides. Our passion for trail riding and adventure is what we live for."
+>
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="section-label">Your Guides</p>
+      <h1 class="display page-title">Your Friendly Singletrack Trail Techs!</h1>
+    </div>
+  </section>
+
+  <section class="guides">
+    <div class="wrap">
+      <div class="guide-card">
+        <img src="/images/doug-portrait.jpg" alt="Doug McDonald" class="guide-photo" />
+        <div class="guide-bio">
+          <h2 class="display guide-name">Doug "Mack" McDonald</h2>
+          <p>Looking at what I do today makes me laugh! I am still doing the things that I did when I was 13 — moto has the same appeal today as it did then and more!</p>
+          <p>Trials riding has been my passion. Competing at the Expert-Pro level for five years, I revel in the technical trail sections. After retiring from Trials, Enduro riding was a natural progression.</p>
+          <p>I really enjoy sharing with other riders and putting them on a trail that gives them a great experience — that perfect day where the challenge meets or just exceeds the skill level.</p>
+          <p>We've been providing this unique, off-road experience here in the Northwest for a long time, sharing with thousands of riders the incredible terrain here. Cheers! — Doug "Mack" McDonald.</p>
+        </div>
+      </div>
+
+      <div class="guide-card guide-card--no-photo">
+        <div class="guide-bio">
+          <h2 class="display guide-name">Jesse</h2>
+          <p>While working full time in the aviation maintenance industry has fulfilled a need to travel and challenge himself, motorcycles have remained a constant source of joy in his life from teenage years forward.</p>
+          <p>Jesse is your guy for the less technical side of the ride; specializing in beginner tutelage and flowy singletrack rides, he'll tailor your ride for maximum enjoyment. His trailside mechanical skills are also a plus.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="wrap">
+      <p class="section-label">What Riders Say</p>
+      <div class="quotes">
+        <blockquote>
+          <p>"First, there is a great guy, Doug McDonald, who has bikes, gear, even boots, and he guides you through the best spots in the Hood River, Oregon Coast, Mount Adams and other areas. His bikes are late models and very well maintained."</p>
+        </blockquote>
+        <blockquote>
+          <p>"Most beautiful and challenging riding I have ever participated in. Really. This is great stuff. Of course, the guy is like a mountain goat so you will learn some shit. I literally can't wait to ride again."</p>
+        </blockquote>
+        <blockquote>
+          <p>"Not having to ship bikes is also great. Also, food, wine and beer in Oregon is amazing, so night is fun. Wine tour on days off."</p>
+        </blockquote>
+      </div>
+      <a href="/reviews-testimonials-raves/" class="btn btn-outline" style="margin-top:32px">Read All Reviews</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-hero { background: var(--ink); color: var(--cream); padding: 72px 0 80px; }
+  .page-title { font-size: clamp(36px, 6vw, 76px); color: var(--cream); margin-bottom: 20px; }
+
+  .guides { padding: 80px 0; }
+  .guide-card { display: grid; grid-template-columns: 300px 1fr; gap: 64px; align-items: start; margin-bottom: 80px; }
+  .guide-card--no-photo { grid-template-columns: 1fr; }
+  .guide-photo { width: 100%; aspect-ratio: 3/4; object-fit: cover; }
+  .guide-name { font-size: clamp(32px, 4vw, 56px); color: var(--leather); margin-bottom: 20px; }
+  .guide-bio p { margin-bottom: 16px; }
+
+  .testimonials { background: var(--ink); color: var(--cream); padding: 80px 0; }
+  .quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; margin-top: 32px; }
+  blockquote { border-left: 3px solid var(--rust); padding-left: 24px; }
+  blockquote p { opacity: 0.85; font-style: italic; }
+
+  @media (max-width: 768px) {
+    .guide-card { grid-template-columns: 1fr; gap: 32px; }
+  }
+</style>
