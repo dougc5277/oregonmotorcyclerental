@@ -1,0 +1,71 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout
+  title="Off Road Motorcycle Training | Oregon Motorcycle Rental"
+  description="We offer on trail dirt bike training to help you develop new skill sets and excel on any terrain. Sessions are available for all levels of riding."
+>
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="section-label">On-Trail Training</p>
+      <h1 class="display page-title">Off-Road Motorcycle Training</h1>
+      <p class="page-sub">Interested in improving your skills to build more confidence and speed on the trails?</p>
+    </div>
+  </section>
+
+  <section class="training-detail">
+    <div class="wrap">
+      <div class="training-grid">
+        <div class="training-content">
+          <h2 class="display section-title">Improve your skills and riding confidence!</h2>
+          <p>We're here to give you the practical and personal training necessary to improve your riding. We'll discuss your individual needs and develop a custom plan to help build your skills.</p>
+          <p>Everything you learn at OMR will be on the trail — not in a classroom or staged environment. Ride on the latest model Husqvarna and KTM bikes.</p>
+          <ul class="training-features">
+            <li>All skill levels welcome, including complete beginners</li>
+            <li>Kids 12 and up (5'2" and taller)</li>
+            <li>Individual 1:1 sessions or groups of 2–4</li>
+            <li>Groups kept to your crew only — no strangers</li>
+            <li>Custom day planned for your specific needs</li>
+          </ul>
+        </div>
+        <div class="training-sidebar">
+          <div class="cost-box">
+            <p class="cost-label">Training Add-On</p>
+            <div class="cost-amount">$50</div>
+            <div class="cost-unit">per rider / per day</div>
+            <p>Added to your <a href="/motorcycle-rental-portland/">bike rental package ($250/day)</a>.</p>
+          </div>
+          <div class="training-cta">
+            <p class="section-label">Book your training day</p>
+            <a href="tel:5092810156" class="btn btn-big">509-281-0156</a>
+            <a href="/contact/" class="btn btn-outline" style="margin-top:12px">Contact Form</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-hero { background: var(--ink); color: var(--cream); padding: 72px 0 80px; }
+  .page-title { font-size: clamp(42px, 7vw, 88px); color: var(--cream); margin-bottom: 20px; }
+  .page-sub { font-size: 22px; max-width: 600px; opacity: 0.85; }
+
+  .training-detail { padding: 80px 0; }
+  .training-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 64px; align-items: start; }
+  .section-title { font-size: clamp(32px, 4vw, 52px); color: var(--leather); margin-bottom: 24px; }
+  .training-content p { margin-bottom: 16px; }
+  .training-features { list-style: none; margin-top: 24px; display: flex; flex-direction: column; gap: 10px; }
+  .training-features li::before { content: '✓ '; color: var(--rust); font-weight: 700; }
+
+  .cost-box { border: 2px solid var(--rust); padding: 32px; margin-bottom: 32px; }
+  .cost-label { font-size: 14px; text-transform: uppercase; letter-spacing: 0.15em; font-weight: 700; color: var(--rust); margin-bottom: 8px; }
+  .cost-amount { font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: 72px; color: var(--rust); line-height: 1; }
+  .cost-unit { font-size: 14px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; margin-bottom: 16px; }
+  .cost-box a { color: var(--rust); font-weight: 700; }
+  .training-cta { display: flex; flex-direction: column; }
+
+  @media (max-width: 768px) {
+    .training-grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+</style>
