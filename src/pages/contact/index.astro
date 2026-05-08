@@ -1,0 +1,106 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout
+  title="Contact | Oregon Motorcycle Rental"
+  description="Contact Oregon Motorcycle Rentals via phone or email to set up a singletrack experience. We have enduro motorcycles from KTM and Husqvarna for rent."
+>
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="section-label">Get in Touch</p>
+      <h1 class="display page-title">Contact</h1>
+    </div>
+  </section>
+
+  <section class="contact-body">
+    <div class="wrap">
+      <div class="contact-grid">
+
+        <div class="contact-main">
+          <h2 class="display section-heading">Reservations</h2>
+          <p>Please call Doug at <a href="tel:5092810156" class="highlight">509-281-0156</a> for questions about dirt bike rentals, training, riding locations, or to make your reservation.</p>
+          <p class="deposit-note">If you can't ride on your confirmed reservation date we'll roll any deposit over to a future date at your convenience. You won't lose your deposit if you can't ride on that date!</p>
+
+          <h2 class="display section-heading">Location Dates</h2>
+          <p>We're now located year-round in Wickenburg, near Phoenix, Arizona.</p>
+          <p><a href="/tour-packages-motorcycle-rides-oregon/" class="highlight">View all riding locations →</a></p>
+        </div>
+
+        <aside class="contact-sidebar">
+          <div class="contact-card">
+            <p class="section-label">Direct Contact</p>
+            <a href="tel:5092810156" class="phone-number">509-281-0156</a>
+            <a href="mailto:gorgemaster@gmail.com" class="email-link">gorgemaster@gmail.com</a>
+            <div class="contact-details">
+              <p>Doug McDonald<br>Hood River, Oregon 97031</p>
+              <p>Licensed, bonded, and insured.<br>Se habla Español.</p>
+            </div>
+          </div>
+
+          <div class="social-block">
+            <p class="section-label">Follow Along</p>
+            <ul class="social-list">
+              <li>Instagram: <a href="https://instagram.com/oregonmotorcyclerental" target="_blank" rel="noopener">@oregonmotorcyclerental</a></li>
+              <li>Facebook: <a href="https://facebook.com/oregonmotorcyclerentals" target="_blank" rel="noopener">@oregonmotorcyclerentals</a></li>
+              <li>YouTube: <a href="https://youtube.com/@oregonmotorcyclerental" target="_blank" rel="noopener">@oregonmotorcyclerental</a></li>
+            </ul>
+            <p class="hashtag">Tag your ride photos: <strong>#oregonmotorcyclerental</strong></p>
+          </div>
+
+          <div class="reviews-block">
+            <p class="section-label">Leave a Review</p>
+            <div class="review-links">
+              <a href="https://www.tripadvisor.com" target="_blank" rel="noopener" class="btn">TripAdvisor</a>
+              <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn">Google Reviews</a>
+              <a href="https://yelp.com" target="_blank" rel="noopener" class="btn">Yelp</a>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-hero { background: var(--ink); color: var(--cream); padding: 72px 0 80px; }
+  .page-title { font-size: clamp(56px, 9vw, 112px); color: var(--cream); }
+
+  .contact-body { padding: 80px 0; }
+  .contact-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 80px; align-items: start; }
+
+  .section-heading { font-size: clamp(28px, 3.5vw, 44px); color: var(--leather); margin: 48px 0 16px; }
+  .section-heading:first-child { margin-top: 0; }
+  .contact-main p { margin-bottom: 16px; }
+  .highlight { color: var(--rust); font-weight: 700; text-decoration: none; }
+  .deposit-note { font-size: 16px; padding: 16px 20px; background: var(--cream-deep); border-left: 3px solid var(--rust); margin-bottom: 48px; }
+
+  .contact-card { border: 2px solid var(--line); padding: 32px; margin-bottom: 32px; }
+  .phone-number {
+    display: block;
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 900;
+    font-size: 36px;
+    color: var(--rust);
+    text-decoration: none;
+    margin: 8px 0;
+  }
+  .phone-number:hover { color: var(--leather); }
+  .email-link { display: block; font-weight: 700; color: var(--leather); text-decoration: none; margin-bottom: 20px; }
+  .email-link:hover { color: var(--rust); }
+  .contact-details p { font-size: 15px; margin-bottom: 8px; opacity: 0.75; }
+
+  .social-block { margin-bottom: 32px; }
+  .social-list { list-style: none; margin: 12px 0; display: flex; flex-direction: column; gap: 8px; font-size: 15px; }
+  .social-list a { color: var(--rust); font-weight: 700; text-decoration: none; }
+  .social-list a:hover { text-decoration: underline; }
+  .hashtag { font-size: 15px; margin-top: 12px; }
+
+  .reviews-block {}
+  .review-links { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; }
+  .review-links .btn { text-align: center; }
+
+  @media (max-width: 768px) {
+    .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  }
+</style>
