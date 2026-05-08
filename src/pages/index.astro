@@ -1,17 +1,69 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
 ---
+<Layout
+  title="Oregon Motorcycle Rental, Off Road Trail Riding Enduro Tours, and Training"
+  description="At Oregon Motorcycle Rental we rent Husqvarna and KTM off road enduro trail bikes and ride the best off road single track trails in Oregon and Washington"
+>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Hood River, Oregon</p>
+      <h1 class="display hero-title">Oregon Motorcycle Rental</h1>
+      <p class="hero-sub">We rent Husqvarna and KTM motorcycles and ride the best singletrack trails in Oregon and Southern Washington.</p>
+      <div class="hero-ctas">
+        <a href="/motorcycle-rental-portland/" class="btn btn-big">View Bikes</a>
+        <a href="/contact/" class="btn btn-outline-light btn-big">Book a Ride</a>
+      </div>
+    </div>
+  </section>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+  <section class="services">
+    <div class="wrap">
+      <div class="services-grid">
+        <div class="service-card">
+          <h2 class="display service-title">Bikes For Rent</h2>
+          <p>Check out our range of KTM and Husqvarna dirt bikes. We have 150, 250, and 300 2-strokes, and 350 and 450 4-stroke motorcycles to choose from.</p>
+          <a href="/motorcycle-rental-portland/" class="btn">View Bikes</a>
+        </div>
+        <div class="service-card">
+          <h2 class="display service-title">Training</h2>
+          <p>Add $50 per rider per day for expert feedback and practice drills while on your ride. All levels welcome, including beginners and kids 12+.</p>
+          <a href="/off-road-motorcycle-training/" class="btn">Learn More</a>
+        </div>
+        <div class="service-card">
+          <h2 class="display service-title">Guided Locations</h2>
+          <p>Ride Hood River, Coastal Oregon, Washington State, and Arizona. Year-round availability at our Oregon and Arizona locations.</p>
+          <a href="/tour-packages-motorcycle-rides-oregon/" class="btn">See Locations</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <p class="section-label">Make a Reservation</p>
+      <h2 class="display section-title">Ready to ride?</h2>
+      <p>Call Doug at <a href="tel:5092810156">509-281-0156</a> or use our contact form.</p>
+      <a href="/contact/" class="btn btn-big" style="margin-top:24px">Contact Us</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 80px 0 100px;
+  }
+  .hero-title { font-size: clamp(52px, 9vw, 110px); color: var(--cream); margin-bottom: 24px; }
+  .hero-sub { font-size: 22px; max-width: 620px; margin-bottom: 40px; opacity: 0.85; }
+  .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+
+  .services { padding: 80px 0; }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; }
+  .service-card { display: flex; flex-direction: column; gap: 16px; }
+  .service-title { font-size: clamp(32px, 4vw, 48px); color: var(--leather); }
+
+  .cta-band { background: var(--cream-deep); padding: 80px 0; }
+  .cta-band a[href^="tel"] { color: var(--rust); font-weight: 700; }
+</style>
