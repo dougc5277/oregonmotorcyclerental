@@ -4,96 +4,28 @@ import Layout from '../../layouts/Layout.astro';
 
 <Layout
   title="Motorcycle Rental - Off Road Adventure | Oregon Motorcycle Rental"
-  description="Check out our off-road motorcycle enduro tour locations. Bring your posse or set up private one-on-one time with one of our expert guides."
+  description="Doug currently guides full-time in Wickenburg, Arizona. Year-round desert riding, an hour from the Phoenix airport."
 >
 
   <!-- Hero -->
   <section class="hero">
     <div class="hero-bg">
-      <img src="/images/2020/05/Oregon-Motorcycle-Rental-KTM-300-XC-W-TPI-2019-Field.jpg" alt="" class="hero-img" />
+      <img src="/images/omr-locations.webp" alt="" class="hero-img" />
       <div class="hero-overlay"></div>
     </div>
     <div class="hero-body wrap">
       <p class="eyebrow">Tour Locations</p>
-      <h1 class="display hero-title">Currently Riding<br>Arizona.</h1>
-      <p class="hero-sub"><strong>Doug currently guides full-time out of Wickenburg, Arizona. The Pacific Northwest locations below are paused. He may return to guide them in the future.</strong></p>
-      <a href="https://arizonadirtbikerentals.com" class="btn btn-big">Book Your Ride</a>
+      <h1 class="display hero-title">Now Riding<br>Wickenburg,<br>Arizona.</h1>
+      <p class="hero-sub"><strong>Doug guides full-time in the Arizona desert. Year-round riding, an hour from the Phoenix airport. Sandy washes and miles of singletrack.</strong></p>
+      <a href="https://arizonadirtbikerentals.com" class="btn btn-big">Book in Arizona →</a>
     </div>
   </section>
 
-  <!-- Active: Arizona -->
-  <section class="locations">
-    <div class="loc-card loc-card--active">
-      <div class="loc-img-wrap">
-        <img src="/images/2016/12/Arizona-Off-Road-Motorcycle-Training-1.jpg" alt="Arizona riding" class="loc-img" loading="lazy" />
-        <span class="loc-tag loc-tag--active">Now Booking</span>
-      </div>
-      <div class="loc-body loc-body--active">
-        <div>
-          <p class="loc-state">Arizona</p>
-          <h2 class="display loc-name">Arizona</h2>
-          <p class="loc-blurb">Year-round desert riding near Wickenburg. On the trail in an hour from the airport. Sandy washes and miles of single track. Doug guides here full-time.</p>
-        </div>
-        <a href="https://arizonadirtbikerentals.com" class="btn">Explore Arizona →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Paused: Pacific Northwest -->
-  <section class="paused-section">
-    <div class="wrap paused-header">
-      <h2 class="display paused-title">Paused locations</h2>
-      <p class="paused-sub">Doug ran rides at these locations for 15 years. They're paused while he's in Arizona.</p>
-    </div>
-
-    <div class="locations locations--muted">
-      <div class="loc-card">
-        <div class="loc-img-wrap">
-          <img src="/images/2017/02/motorcycle-rental-1.jpg" alt="Hood River riding" class="loc-img" loading="lazy" />
-          <span class="loc-tag">Home Base</span>
-          <span class="paused-badge">Paused</span>
-        </div>
-        <div class="loc-body">
-          <div>
-            <p class="loc-state">Oregon</p>
-            <h2 class="display loc-name">Hood River</h2>
-            <p class="loc-blurb">There's a reason OMR is based here. Single track that rivals anything in the world — snowboard in the morning, dirt-bike in the afternoon.</p>
-          </div>
-          <a href="/hood-river/" class="btn btn-outline">Explore Hood River</a>
-        </div>
-      </div>
-
-      <div class="loc-card loc-card--flip">
-        <div class="loc-img-wrap">
-          <img src="/images/2017/05/Dirt-Bike-Rental-1.jpg" alt="Coastal Oregon riding" class="loc-img" loading="lazy" />
-          <span class="loc-tag">Year-Round</span>
-          <span class="paused-badge">Paused</span>
-        </div>
-        <div class="loc-body">
-          <div>
-            <p class="loc-state">Oregon</p>
-            <h2 class="display loc-name">Coastal Oregon</h2>
-            <p class="loc-blurb">Beginner to black diamond loops, dust-free almost any time of year. One of the largest OHV areas in the country.</p>
-          </div>
-          <a href="/coastal-oregon/" class="btn btn-outline">Explore Coastal Oregon</a>
-        </div>
-      </div>
-
-      <div class="loc-card">
-        <div class="loc-img-wrap">
-          <img src="/images/2017/02/motorcycle-rental-2.jpg" alt="Washington State riding" class="loc-img" loading="lazy" />
-          <span class="loc-tag">Advanced</span>
-          <span class="paused-badge">Paused</span>
-        </div>
-        <div class="loc-body">
-          <div>
-            <p class="loc-state">Washington</p>
-            <h2 class="display loc-name">Washington State</h2>
-            <p class="loc-blurb">20 to 70-mile loops of epic single track. Remote and challenging — open July through October.</p>
-          </div>
-          <a href="/washington-state/" class="btn btn-outline">Explore Washington</a>
-        </div>
-      </div>
+  <!-- PNW note -->
+  <section class="pnw-note">
+    <div class="wrap">
+      <h3>Pacific Northwest, paused</h3>
+      <p>Doug previously guided at Hood River, Coastal Oregon, and Washington State. Those rides are paused while he's in Arizona. He may return north in the future.</p>
     </div>
   </section>
 
@@ -104,7 +36,7 @@ import Layout from '../../layouts/Layout.astro';
       <p class="section-label final-label">Plan Your Trip</p>
       <h2 class="display final-title">Bring your posse<br>or ride solo.</h2>
       <a href="tel:5092810156" class="final-phone">509 · 281 · 0156</a>
-      <p class="final-note">Call Doug to book in Arizona, or to ask about future Pacific Northwest plans.</p>
+      <p class="final-note">Call Doug to book your Arizona ride.</p>
       <a href="https://arizonadirtbikerentals.com" class="btn btn-outline-light btn-big">Or Send a Message</a>
     </div>
   </section>
@@ -136,8 +68,10 @@ import Layout from '../../layouts/Layout.astro';
   .hero-body {
     position: relative;
     z-index: 1;
-    padding: 80px 24px;
-    max-width: 680px;
+    padding: 80px 24px 100px;
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
   }
   .hero-title {
     font-size: clamp(64px, 10vw, 120px);
@@ -148,120 +82,31 @@ import Layout from '../../layouts/Layout.astro';
   .hero-sub {
     font-size: 20px;
     line-height: 1.5;
-    max-width: 520px;
+    max-width: 48ch;
     opacity: 0.88;
     margin-bottom: 40px;
   }
 
-  /* ── Location cards ───────────────────────────────── */
-  .locations { padding: 0; }
-  .loc-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    min-height: 540px;
-  }
-  .loc-card--flip { direction: rtl; }
-  .loc-card--flip > * { direction: ltr; }
-
-  /* Active Arizona card */
-  .loc-card--active { min-height: 620px; }
-  .loc-body--active {
+  /* ── PNW note ─────────────────────────────────────── */
+  .pnw-note {
+    padding: 80px 0;
     background: var(--cream-deep);
-    border-left-width: 6px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
   }
-
-  .loc-img-wrap { position: relative; overflow: hidden; }
-  .loc-img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .loc-tag {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background: var(--rust);
-    color: var(--cream);
-    font-size: 11px;
-    font-weight: 700;
+  .pnw-note h3 {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 900;
+    font-size: clamp(28px, 3vw, 42px);
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    padding: 5px 12px;
+    color: var(--leather-soft);
+    margin-bottom: 16px;
   }
-  .loc-tag--active {
-    background: #16a34a;
-    font-size: 13px;
-    padding: 8px 16px;
-  }
-
-  .paused-badge {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: rgba(0,0,0,0.55);
-    color: #fff;
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    padding: 5px 12px;
-  }
-
-  .loc-body {
-    padding: 64px 72px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-left: 4px solid var(--rust);
-    background: var(--cream-soft);
-  }
-  .loc-card--flip .loc-body {
-    border-left: none;
-    border-right: 4px solid var(--rust);
-  }
-  .loc-state {
-    font-size: 12px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: var(--rust);
-    margin-bottom: 8px;
-  }
-  .loc-name {
-    font-size: clamp(36px, 4.5vw, 64px);
-    color: var(--leather);
-    margin-bottom: 24px;
-    line-height: 0.95;
-  }
-  .loc-blurb {
+  .pnw-note p {
     font-size: 18px;
-    line-height: 1.65;
-    color: var(--ink-2);
-    margin-bottom: 40px;
-  }
-
-  /* Muted paused cards */
-  .locations--muted .loc-card { opacity: 0.6; }
-  .locations--muted .loc-card:hover { opacity: 0.8; transition: opacity 0.2s ease; }
-
-  /* Paused section header */
-  .paused-section { background: var(--cream-deep); padding-top: 80px; }
-  .paused-header { padding-bottom: 48px; border-bottom: 2px solid var(--line); margin-bottom: 0; }
-  .paused-title { font-size: clamp(32px, 4vw, 56px); color: var(--leather-soft); margin-bottom: 12px; }
-  .paused-sub { font-size: 18px; color: var(--leather-soft); max-width: 52ch; }
-
-  @media (max-width: 900px) {
-    .loc-card, .loc-card--flip {
-      grid-template-columns: 1fr;
-      direction: ltr;
-      min-height: auto;
-    }
-    .loc-img-wrap { aspect-ratio: 16 / 9; }
-    .loc-body {
-      padding: 40px 24px;
-      border-left: 4px solid var(--rust);
-      border-right: none;
-    }
-    .loc-card--flip .loc-body {
-      border-left: 4px solid var(--rust);
-      border-right: none;
-    }
+    color: var(--leather-soft);
+    max-width: 56ch;
+    line-height: 1.6;
   }
 
   /* ── Final CTA ────────────────────────────────────── */
