@@ -170,9 +170,10 @@ const bikes = [
   .hero-body {
     position: relative;
     z-index: 1;
-    padding-top: 80px;
-    padding-bottom: 80px;
-    max-width: 680px;
+    padding: 80px 24px 100px;
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
   }
   .hero-title {
     font-size: clamp(64px, 10vw, 120px);
@@ -239,8 +240,9 @@ const bikes = [
   .price-includes {
     list-style: none;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px 32px;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    gap: 10px 24px;
   }
   .price-includes li {
     font-size: 18px;

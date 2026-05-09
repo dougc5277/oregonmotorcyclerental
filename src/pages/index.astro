@@ -27,9 +27,9 @@ import Layout from '../layouts/Layout.astro';
     <div class="rides-header">
       <div>
         <div class="section-label">The Ride</div>
-        <h2 class="display section-title">One ride. Built for experienced riders.</h2>
+        <h2 class="display section-title">Built for experienced riders.</h2>
       </div>
-      <p style="font-size: 18px;">This is not a beginner program. If you've got miles under your belt and want a guide who knows every good line in the Pacific Northwest, rides are now based in Arizona.</p>
+      <p style="font-size: 18px;">If you've got miles under your belt and want a guide who knows every good line in the Pacific Northwest, rides are now based in Arizona.</p>
     </div>
     <div class="ride-feature">
       <div class="ride-feature-img">
@@ -38,7 +38,6 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <div class="ride-feature-body">
         <h3>Advanced Rider Days</h3>
-        <p>Groups of 1 to 4. We rode the kind of terrain that makes Oregon famous. Technical singletrack. Flowing forest trails. Steep climbs. River crossings. High desert lines across the state border.</p>
         <p>Fresh bikes dialed in right. Tell us what you want out of the day and we'll build it around you.</p>
         <ul class="ride-specs">
           <li>KTM &amp; Husqvarna</li>
@@ -58,7 +57,7 @@ import Layout from '../layouts/Layout.astro';
   <div class="wrap">
     <div class="proof-header">
       <div class="section-label">What Riders Say</div>
-      <h2 class="display section-title" style="margin: 0 auto 20px;">Over 100 five-star reviews.</h2>
+      <h2 class="display section-title" style="margin: 0 auto 20px; white-space: nowrap; max-width: none;">Over 100 five-star reviews.</h2>
       <div class="stars">★★★★★</div>
       <span class="count">Google &amp; Facebook verified</span>
     </div>
@@ -100,9 +99,7 @@ import Layout from '../layouts/Layout.astro';
 <section class="photo-break">
   <div class="photo-break-bg"></div>
   <div class="photo-break-content">
-    <span class="eyebrow" style="font-size: 16px;">The Northwest Is Calling</span>
     <h2 class="display">Built for <em>singletrack.</em></h2>
-    <p><strong>Moss-covered trees. Loamy corners. Technical climbs through old growth forest. Dry high desert lines across the river. This is the kind of riding people fly across the country for.</strong></p>
   </div>
 </section>
 
@@ -113,10 +110,7 @@ import Layout from '../layouts/Layout.astro';
         <img src="/images/rider-forest.jpg" alt="Husqvarna rider on a Pacific Northwest forest singletrack trail">
       </div>
       <div class="why-text">
-        <div class="section-label">Why Oregon</div>
         <h2 class="display section-title">15 years in the saddle. Thousands of happy riders.</h2>
-        <p>The Columbia Gorge sits at the meeting point of two very different worlds. Wet forest singletrack on the Oregon side. Dry high desert trails just across in Washington. Doug guided in both for over a decade starting in 2010.</p>
-        <p>That's why riders drive up from California, fly in from the East Coast, and come back year after year.</p>
         <div class="stats">
           <div>
             <div class="stat-num">15+</div>
@@ -187,10 +181,10 @@ import Layout from '../layouts/Layout.astro';
   .eyebrow::before { content: ''; display: block; width: 36px; height: 3px; background: var(--rust); }
   .hero h1 { font-size: clamp(56px, 9.5vw, 132px); max-width: 14ch; margin-bottom: 26px; color: var(--cream); text-shadow: 0 2px 30px rgba(0,0,0,0.35); }
   .hero h1 em { font-style: normal; color: var(--rust); }
-  .hero-eyebrow { font-size: 13px; font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase; color: var(--rust); margin-bottom: 20px; }
+  .hero-eyebrow { font-size: 18px; font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase; color: var(--rust); margin-bottom: 20px; }
   .hero-sub { font-size: clamp(20px, 2.2vw, 26px); max-width: 48ch; margin-bottom: 40px; color: rgba(253,252,249,0.85); }
   .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-bottom: 28px; }
-  .hero-note { font-size: 14px; color: rgba(253,252,249,0.55); max-width: 48ch; font-style: italic; }
+  .hero-note { font-size: 18px; color: rgba(253,252,249,0.55); max-width: 48ch; font-style: italic; }
 
   /* PRICE STRIP */
   .price-strip { background: var(--rust); color: #fff; padding: 40px 24px; position: relative; overflow: hidden; }
