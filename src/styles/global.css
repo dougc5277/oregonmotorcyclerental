@@ -22,7 +22,7 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: 'DM Sans', system-ui, sans-serif;
-  font-size: 19px;
+  font-size: 18px;
   background: var(--cream);
   color: var(--leather);
   line-height: 1.55;
@@ -109,4 +109,27 @@ a { color: inherit; }
   width: 36px;
   height: 3px;
   background: var(--rust);
+}
+
+/* ===== AZ Banner ===== */
+.az-banner {
+  position: sticky; top: 0; z-index: 100;
+  background: #c2410c; color: #fff;
+  padding: 12px 20px;
+  display: flex; align-items: center; justify-content: center;
+  gap: 16px; font-size: 15px; text-align: center; flex-wrap: wrap;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.az-banner-text { font-weight: 500; }
+.az-banner-text strong { font-weight: 700; }
+.az-banner-btn {
+  background: #fff; color: #c2410c;
+  padding: 6px 16px; border-radius: 4px;
+  text-decoration: none; font-weight: 700;
+  white-space: nowrap; font-size: 14px;
+}
+.az-banner-btn:hover { transform: translateY(-1px); }
+@media (max-width: 600px) {
+  .az-banner { font-size: 13px; padding: 10px 14px; gap: 10px; }
+  .az-banner-btn { font-size: 13px; padding: 5px 12px; }
 }
