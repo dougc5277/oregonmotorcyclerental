@@ -1,6 +1,6 @@
 ---
 ---
-<header>
+<header id="site-header">
   <div class="logo-bar">
     <a href="/" class="logo-link">
       <img src="/images/2016/10/OMR-Logo-10-20-2016.png" alt="Oregon Motorcycle Rental" class="site-logo" onerror="this.style.display='none'" />
@@ -16,11 +16,47 @@
       <a href="/oregon-motorcycle-rentals-news/">Blog</a>
       <a href="/contact/">Contact</a>
     </nav>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
   </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <a href="/motorcycle-rental-portland/">Bikes</a>
+    <a href="/off-road-motorcycle-training/">Training</a>
+    <a href="/tour-packages-motorcycle-rides-oregon/">Locations</a>
+    <a href="/portland-oregon-motorcycle-rentals-about-us-2/">About</a>
+    <a href="/reviews-testimonials-raves/">Reviews</a>
+    <a href="/oregon-motorcycle-rentals-news/">Blog</a>
+    <a href="/contact/">Contact</a>
+    <a href="tel:5092810156" target="_blank" class="mobile-phone">509·281·0156</a>
+  </nav>
 </header>
 
-<style>
-  header {
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('mobile-nav');
+
+  toggle.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    toggle.classList.toggle('open', isOpen);
+    nav.setAttribute('aria-hidden', String(!isOpen));
+  });
+
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      nav.setAttribute('aria-hidden', 'true');
+    });
+  });
+</script>
+
+<style is:global>
+  #site-header {
     position: sticky;
     top: 0;
     z-index: 100;
@@ -28,7 +64,7 @@
     color: var(--cream);
     border-bottom: 3px solid var(--rust);
   }
-  .logo-bar {
+  #site-header .logo-bar {
     background: var(--cream-soft);
     display: flex;
     justify-content: center;
@@ -36,12 +72,12 @@
     padding: 16px 24px;
     border-bottom: 1px solid var(--line-soft);
   }
-  .site-logo {
+  #site-header .site-logo {
     height: 84px;
     width: auto;
     display: block;
   }
-  .header-inner {
+  #site-header .header-inner {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,7 +85,7 @@
     max-width: 1240px;
     margin: 0 auto;
   }
-  nav {
+  #site-header nav {
     display: flex;
     justify-content: center;
     gap: 28px;
@@ -58,15 +94,73 @@
     text-transform: uppercase;
     letter-spacing: 0.08em;
   }
-  nav a { text-decoration: none; color: var(--cream); padding: 4px 0; }
-  nav a:hover { color: var(--rust); }
-  .logo-link { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-  .logo-text {
+  #site-header nav a { text-decoration: none; color: var(--cream); padding: 4px 0; }
+  #site-header nav a:hover { color: var(--rust); }
+  #site-header .logo-link { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+
+  /* Hamburger button */
+  #site-header .menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+  #site-header .bar {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: var(--cream);
+    border-radius: 2px;
+    transition: transform 0.2s, opacity 0.2s;
+  }
+  #site-header .menu-toggle.open .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #site-header .menu-toggle.open .bar:nth-child(2) { opacity: 0; }
+  #site-header .menu-toggle.open .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* Mobile nav dropdown */
+  #site-header .mobile-nav {
+    display: none;
+    flex-direction: column;
+    background: var(--ink);
+    border-top: 1px solid rgba(253,252,249,0.1);
+  }
+  #site-header .mobile-nav a {
+    padding: 5px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-bottom: 1px solid rgba(253,252,249,0.08);
+    color: var(--cream);
+    text-decoration: none;
+    display: block;
+  }
+  #site-header .mobile-nav a:hover,
+  #site-header .mobile-nav a:active { color: var(--rust); }
+  #site-header .mobile-nav .mobile-phone {
+    color: var(--rust);
     font-family: 'Big Shoulders Display', sans-serif;
     font-weight: 900;
-    font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: -0.01em;
-    color: var(--leather);
+    font-size: 22px;
+    letter-spacing: 0.02em;
+    text-transform: none;
+    padding: 6px 20px;
+    border-bottom: none;
+  }
+
+  @media (max-width: 800px) {
+    #site-header .menu-toggle { display: flex; }
+    #site-header nav { display: none; }
+    #site-header .header-inner { justify-content: flex-end; padding: 10px 16px; }
+    #site-header .mobile-nav.open { display: flex; }
   }
 </style>

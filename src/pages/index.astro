@@ -15,7 +15,7 @@ import Layout from '../layouts/Layout.astro';
     <p class="hero-sub"><strong>Same guide. Same bikes. Same hospitality.</strong></p>
     <div class="hero-ctas">
       <a href="https://arizonadirtbikerentals.com" class="btn btn-big">Visit Arizona Dirt Bike Rentals →</a>
-      <a href="tel:5092810156" class="btn btn-big btn-outline-light">Call Doug · 509-281-0156</a>
+      <a href="tel:5092810156" target="_blank" class="btn btn-big btn-outline-light">Call Doug · 509-281-0156</a>
     </div>
     <p class="hero-note">Oregon rides are paused. The Pacific Northwest will be back when Doug returns north.</p>
   </div>
@@ -46,7 +46,7 @@ import Layout from '../layouts/Layout.astro';
           <li>Licensed, bonded, insured</li>
           <li>Se habla español</li>
         </ul>
-        <a href="tel:5092810156" class="btn btn-big">Book a Day</a>
+        <a href="tel:5092810156" target="_blank" class="btn btn-big">Book a Day</a>
       </div>
     </div>
   </div>
@@ -56,7 +56,7 @@ import Layout from '../layouts/Layout.astro';
   <div class="wrap">
     <div class="proof-header">
       <div class="section-label">What Riders Say</div>
-      <h2 class="display section-title" style="margin: 0 auto 20px; white-space: nowrap; max-width: none;">Over 150 five-star reviews.</h2>
+      <h2 class="display section-title" style="margin: 0 auto 20px;">Over 150 five-star reviews.</h2>
       <div class="stars">★★★★★</div>
       <span class="count">Google &amp; Facebook verified</span>
     </div>
@@ -141,7 +141,7 @@ import Layout from '../layouts/Layout.astro';
         <p>Doug McDonald has been running this operation since 2010. He's the guy who sets up your bike, leads the ride, and answers the phone.</p>
         <p>He'll meet you where you are as a rider and build a day around what you want out of it. That's why people come back year after year.</p>
         <p>Doug now runs the operation full-time in Wickenburg, Arizona. He started Oregon Motorcycle Rental in 2010 and may return to guide in the Pacific Northwest in the future. For now, all rides happen in the Arizona desert.</p>
-        <a href="tel:5092810156" class="btn" style="margin-top: 12px;">Call Doug</a>
+        <a href="tel:5092810156" target="_blank" class="btn" style="margin-top: 12px;">Call Doug</a>
       </div>
     </div>
   </div>
@@ -154,7 +154,7 @@ import Layout from '../layouts/Layout.astro';
     <div class="section-label">Ready to Ride?</div>
     <h2 class="display">Ready to ride <em>Arizona?</em></h2>
     <p class="lede"><strong>Booking is simple. Call or text Doug, tell him what you want out of the day, and he'll get you on the calendar.</strong></p>
-<a href="tel:5092810156" class="final-phone">509·281·0156</a>
+<a href="tel:5092810156" target="_blank" class="final-phone">509·281·0156</a>
     <p class="final-note">Phone &amp; text · Licensed, bonded, insured · Se habla español</p>
   </div>
 </section>
@@ -163,11 +163,15 @@ import Layout from '../layouts/Layout.astro';
 
 <style>
   /* HERO */
-  .hero { position: relative; min-height: 92vh; display: flex; align-items: center; overflow: hidden; background: var(--ink); color: var(--cream); }
+  .hero { position: relative; min-height: 92vh; display: flex; align-items: center; overflow: hidden; background: var(--ink); color: var(--cream); padding: 0; }
   .hero-bg { position: absolute; inset: 0; background: url('/images/rider-forest.jpg') center/cover no-repeat; opacity: 1; }
   .hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(95deg, rgba(23,17,12,0.78) 0%, rgba(23,17,12,0.55) 35%, rgba(23,17,12,0.15) 65%, rgba(23,17,12,0) 100%); }
   .hero-tread { position: absolute; inset: 0; background: url('/images/tire-tread.png') center/cover no-repeat; mix-blend-mode: screen; opacity: 0.18; pointer-events: none; }
-  @media (max-width: 800px) { .hero-bg::after { background: linear-gradient(180deg, rgba(23,17,12,0.85) 0%, rgba(23,17,12,0.55) 55%, rgba(23,17,12,0.35) 100%); } }
+  @media (max-width: 800px) {
+    .hero-bg::after { background: linear-gradient(180deg, rgba(23,17,12,0.85) 0%, rgba(23,17,12,0.55) 55%, rgba(23,17,12,0.35) 100%); }
+    .hero { min-height: 0; align-items: flex-start; }
+    .hero-content { padding: 32px 20px 20px; }
+  }
   .hero-content { position: relative; max-width: 1240px; margin: 0 auto; padding: 80px 24px 100px; width: 100%; }
   .eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 800; letter-spacing: 0.24em; text-transform: uppercase; color: var(--cream); margin-bottom: 32px; }
   .eyebrow::before { content: ''; display: block; width: 36px; height: 3px; background: var(--rust); }
